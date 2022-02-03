@@ -1,0 +1,629 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html, body, #root {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    background: #131227;
+    font-family: 'Roboto', sans-serif;
+    color: #e0dfee;
+}
+
+#root {
+    display: flex;
+}
+
+div, img {
+    transition: all 0.2s ease-in-out;
+}
+
+button {
+    height: 50px;
+}
+
+.MuiSnackbar-root {
+    .MuiPaper-root {
+        background-color: rgba(255, 255, 255, 0.712);
+        color: #000000;
+        font-size: 16px;
+    }
+
+    button {
+        color: #000000;
+        font-weight: bold;
+        background-color: white;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.sessid_splash {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.main_wrap {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.setting_wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.header_wrap {
+    background: rgba(128, 117, 214, 0.5);
+    background: linear-gradient(39deg, rgba(66, 60, 114, 0.4) 0%, rgba(41, 38, 95, 0.5) 100%);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    -webkit-box-shadow: 0px 0px 11px -6px rgba(0,0,0,0.94); 
+    box-shadow: 0px 0px 11px -6px rgba(0,0,0,0.94);
+    border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+
+    .logo_wrap {
+        img {
+            height: 55px;
+        }
+    }
+
+    .MuiFormLabel-root {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .MuiFilledInput-root::before {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.6) !important;
+    }
+
+    input {
+        color: white !important;
+    }
+
+    button {
+        opacity: 0.5;
+        margin-left: 10px;
+        img {
+            height: 70%;
+        }
+        box-shadow: none ;
+        background-color: rgba(0, 0, 0, 0);
+        &:hover {
+            opacity: 1.0;
+        }
+    }
+}
+
+.greenbutton {
+    background-color: rgba(126, 196, 46, 0.836) !important;
+}
+
+.redbutton {
+    background-color: rgba(196, 89, 46, 0.836) !important;
+}
+
+.content_wrap {
+    display: flex;
+    padding: 20px;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.container_header {
+    height: 80px;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+    padding-left: 25px;
+    padding-right: 25px;
+    line-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    button {
+        margin-left: 10px;
+    }
+    h1 {
+        margin: 0px;
+        font-size: 24px;
+        strong {
+            color: #8ff0ac;
+        }
+    }
+}
+
+.livesearches_container_items {
+    border-radius: 16px;
+    width: 39%;
+    background: rgba(128, 117, 214, 0.5);
+    background: linear-gradient(39deg, rgba(66, 60, 114, 0.4) 0%, rgba(41, 38, 95, 0.5) 100%);
+    -webkit-box-shadow: 0px 0px 11px -6px rgba(0,0,0,0.94); 
+    box-shadow: 0px 0px 11px -6px rgba(0,0,0,0.94);
+    display: flex;
+    flex-direction: column;
+
+    .livesearch_hit_wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.1);
+        margin-bottom: 3px;
+        border-radius: 6px;
+        width: calc(100% - 40px);
+        margin-left: 18px;
+        position: relative;
+        cursor: pointer;
+
+        .MuiAlert-action {
+            display: none !important;
+        }
+
+        .MuiSnackbar-root .MuiPaper-root {
+            background-color: rgb(56, 142, 60);
+            color: white;
+        }
+
+        &:hover {
+            border: 1px solid rgb(163, 140, 233);
+            background: rgb(61, 46, 107);
+        }
+
+        img {
+            height: 40px;
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+
+        .hit_name, .hit_price {
+            line-height: 50px;
+            font-size: 12px;
+        }
+
+        .hit_price {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 40%;
+        }
+
+        .hit_name {
+            margin-right: 10px;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 60%;
+        }
+
+        .hit_controls {
+            position: absolute;
+            width: calc(100% - 10px);
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            height: 50px;
+            margin-left: -10px;
+            border-radius: 6px;
+            padding-right: 10px;
+
+            background: rgb(58,50,80);
+            background: linear-gradient(141deg, rgba(58,50,80,0) 65%, rgba(24,14,51,1) 90%);
+            
+            div {
+                display: flex;
+                height: 100%;
+                align-items: center;
+                cursor: pointer;
+            }
+            img {
+                width: 24px;
+                height: 24px;
+                margin-right: 5px;
+                margin-left: 5px;
+                margin-top: 0px;
+            }
+        }
+
+        .whisperhitbutton {
+            border: 2px solid rgba(209, 209, 209, 0.705);
+            color: rgba(170, 170, 170, 0.705);
+            &:hover {
+                background: rgba(170, 170, 170, 0.705);
+                color: rgb(43, 43, 43);
+            }
+        }
+    }
+
+    .livesearches_container_items_wrap {
+        flex: 1 1 auto;
+        overflow-y: auto;
+        height: 100px;
+        padding: 20px;
+
+        .livesearch_hit_header {
+            display: flex;
+            justify-content: space-between;
+            background: rgba(75, 65, 151, 0.5);
+            background: linear-gradient(39deg, rgba(76, 72, 121, 0.4) 0%rgba(63, 61, 110, 0.5) 100%);
+            border-radius: 8px;
+            height: 60px;
+            align-items: center;
+            padding-left: 20px;
+            padding-right: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 5px;
+            button {
+                height: 40px;
+                font-size: 12px;
+                background: rgba(255, 255, 255, 0);
+                border: 2px solid rgba(255, 94, 2, 0.705);
+                color: rgba(255, 94, 2, 0.705);
+                &:hover {
+                    background: rgba(255, 94, 2, 0.705);
+                    color: white;
+                }
+            }
+
+            .hit_title {
+                display: flex;
+                .hit_title_total {
+                    line-height: 27px;
+                    margin-left: 17px;
+                }
+                .hit_title_text {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+                .hit_title_active, .hit_title_inactive {
+                    border: 2px solid;
+                    border-radius: 4px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    font-size: 10px;
+                    margin-right: 20px;
+                }
+
+                .hit_title_active {
+                    border: 2px solid rgba(74, 255, 2, 0.705);
+                    color: rgba(74, 255, 2, 0.705);
+                }
+            }
+        }
+    }
+}
+
+.livesearches_container {
+    border-radius: 16px;
+    width: 60%;
+    background: rgba(128, 117, 214, 0.5);
+    background: linear-gradient(39deg, rgba(66, 60, 114, 0.4) 0%, rgba(41, 38, 95, 0.5) 100%);
+    -webkit-box-shadow: 0px 0px 11px -6px rgba(0,0,0,0.94); 
+    box-shadow: 0px 0px 11px -6px rgba(0,0,0,0.94);
+    display: flex;
+    flex-direction: column;
+
+    .livesearches_item_container {
+        flex: 1 1 auto;
+        overflow-y: auto;
+        height: 100px;
+        padding: 20px;
+        
+        .livesearches_column_header {
+            display: flex;
+            padding-left: 5px;
+            padding-right: 20px;
+            margin-bottom: 20px;
+            color: #6c68af;
+        }
+
+        .livesearch_icon_2 {
+            width: 65px;
+            margin-right: 20px;
+        }
+
+        .livesearch_title {
+            width: 30%;
+            max-width: 30%;
+            font-weight: bold;
+        }
+        .livesearch_code {
+            width: 15%;
+            max-width: 15%;
+        }
+        .livesearch_datestart {
+            width: 15%;
+            max-width: 15%;
+        }
+        .livesearch_timestart {
+            width: 15%;
+            max-width: 15%;
+        }
+        .livesearch_timerunning {
+            width: 15%;
+            max-width: 15%;
+        }
+        .livesearch_hits {
+            width: 10%;
+            max-width: 10%;
+            strong {
+                color: green;
+            }
+        }
+        .livesearch_controls {
+            width: 15%;
+            max-width: 15%;
+            display: flex;
+            justify-content: flex-end;
+            height: 100%;
+            div {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+            }
+            img {
+                height: 25px;
+                margin-left: 5px;
+            }
+        }
+
+        .livesearch_item_wrap {
+            display: flex;
+            height: 70px;
+            background: rgba(75, 65, 151, 0.5);
+            background: linear-gradient(39deg, rgba(76, 72, 121, 0.4) 0%rgba(63, 61, 110, 0.5) 100%);
+            border-radius: 32px 0px 0px 32px;
+            -webkit-box-shadow: 0px 0px 11px -6px rgba(0,0,0,0.94); 
+            box-shadow: 0px 0px 11px -6px rgba(0,0,0,0.94);
+            align-items: center;
+            padding-left: 5px;
+            padding-right: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.151);
+            margin-bottom: 5px;
+
+            .livesearch_item_information_wrap {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                align-items: center;
+            }
+
+            .livesearch_icon {
+                border-radius: 50%;
+                height: 60px;
+                width: 65px;
+                border: 2px solid red;
+                text-align: center;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                margin-right: 20px;
+
+                .livesearch_icon_number {
+                    font-size: 14px;
+                    margin-top: 10px;
+                }
+
+                .livesearch_icon_label {
+                    font-weight: bold;
+                    color: red;
+                }
+            }
+        }
+    }
+}
+
+.item_is_offline {
+    .livesearch_icon {
+        border-color: rgb(165, 165, 165) !important;
+    }
+    .livesearch_icon_number, .livesearch_icon_label, .livesearch_item_information_wrap {
+        color: rgb(165, 165, 165) !important;
+    }
+}
+
+.MuiOutlinedInput-root {
+}
+
+.scroll4::-webkit-scrollbar {
+    width: 10px;
+}
+   
+.scroll4::-webkit-scrollbar-thumb {
+    background: rgb(158, 3, 107);
+    border-radius: 20px;
+}m,  m
+
+.scroll4::-webkit-scrollbar-track {
+    background: #ddd;
+    border-radius: 20px;
+}
+
+.drag {
+    -webkit-app-region: drag;
+}
+
+.no-drag {
+    -webkit-app-region: no-drag;
+}
+
+.title_bar_wrap {
+    background: rgba(40, 31, 68, 0.651);
+    background: linear-gradient(39deg, rgba(41, 38, 95, 0.5) 0%, rgba(56,31,133,1) 100%);
+    border-bottom: 1px solid rgb(93, 71, 158);
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+
+    .title_bar_title_wrap {
+        display: flex;
+        img {
+            margin-left: 20px;
+            height: 35px;
+            margin-top: 8px;
+            margin-right: 20px;
+        }
+        div {
+            height: 55px;
+            line-height: 55px;
+        }
+    }
+
+    .MuiFormLabel-root {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .MuiFilledInput-root::before {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.0) !important;
+    }
+
+    input {
+        color: white !important;
+    }
+
+    button {
+        background-color: rgba(0,0,0,0);
+        box-shadow: none;
+        border-left: 1px solid rgb(95, 72, 167);
+        border-radius: 0px;
+        height: 55px;
+        img {
+            height: 20px;
+        }
+
+        &:hover {
+            background: linear-gradient(39deg, rgba(16,10,34,1) 0%, rgba(56,31,133,1) 100%);
+            border-bottom: 1px solid rgb(93, 71, 158);
+        }
+    }
+}
+
+.dashboard {
+    width: 100px;
+    background: rgba(128, 117, 214, 0.5);
+    background: linear-gradient(39deg, rgba(66, 60, 114, 0.4) 0%, rgba(41, 38, 95, 0.5) 100%);
+    border-right: 1px solid rgb(93, 71, 158);
+    box-shadow: 0px 0px 11px -6px rgba(0,0,0,0.94);
+    display: flex;
+    flex-direction: column;
+
+    .dashboard_logo_wrap {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        img {
+            width: 50px;
+            opacity: 0.7;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    .dashboard_buttons_wrap {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+        .MuiButton-root {
+            padding: 0px !important;
+        }
+
+        button {
+            height: 75px;
+            width: 82px;
+            background: linear-gradient(39deg, rgba(16,10,34,0.7) 0%, rgba(56,31,133,1) 100%);
+            margin-bottom: 15px;
+            img {
+                width: 70%;
+                opacity: 0.7;
+            }
+
+            &:hover {
+                background-color:rgba(93, 71, 158, 0.836);
+                img {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .button_purple_active {
+            background-color:rgba(145, 123, 212, 0.836) !important;
+            border: 1px solid rgba(219, 209, 250, 0.589);
+            img {
+                opacity: 1;
+            }
+        }
+
+        .button_grey {
+            background: linear-gradient(39deg, rgba(99, 99, 99, 0.7) 0%, rgba(189, 189, 189, 0.7) 100%);
+            &:hover {
+                background-color:rgba(170, 169, 169, 0.836);
+            }
+        }
+
+        .button_red {
+            background: linear-gradient(39deg, rgba(100, 72, 20, 0.7) 0%, rgba(187, 56, 23, 0.7) 100%);
+            &:hover {
+                background-color:rgba(158, 96, 71, 0.836);
+            }
+        }
+
+        .button_red_active {
+            background: linear-gradient(39deg, rgba(100, 72, 20, 1) 0%, rgba(187, 56, 23, 1) 100%);
+            border: 1px solid rgb(238, 201, 133);
+            img {
+                opacity: 1;
+            }
+        }
+
+        .button_green {
+            background: linear-gradient(39deg, rgba(20, 100, 80, 0.7) 0%, rgba(23, 187, 91, 0.7) 100%);
+            &:hover {
+                background-color:rgba(71, 158, 104, 0.836);
+            }
+        }
+
+        .button_green_active {
+            background: linear-gradient(39deg, rgba(20, 100, 80, 1) 0%, rgba(23, 187, 91, 1) 100%);
+            border: 1px solid rgb(119, 236, 207);
+            img {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.title_bar_controls {
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+    .ispremium_badge {
+        background: rgb(217,226,15);
+        background: linear-gradient(141deg, rgba(217,226,15,1) 0%, rgba(255,145,0,1) 100%);
+        height: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        line-height: 55px;
+        color: rgb(71, 60, 7);
+        border: 1px solid rgb(141, 99, 9);
+        font-weight: bold;
+        margin-right: 5px;
+    }
+}
