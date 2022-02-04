@@ -2,6 +2,8 @@ HeadHunter tools v1.0.1
 
 Includes the LiveSearch manager with all features unlocked 100% free
 
+**YOU NEED TO MESSAGE ME TO ADD THE FLAG TO YOUR ACCOUNT TO AUTO-COPY. THIS IS A TEMPORARY ISSUE.**
+
 Message me on discord if you have any questions
 Discord: https://discord.gg/bPb5VxghAt
 
